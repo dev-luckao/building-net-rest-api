@@ -13,3 +13,11 @@ dotnet user-secrets init # first time for initial UserSecretsId in .csproj
 $sa_password = "[SA PASSWORD HERE ex. Pass@word123]"
 dotnet user-secrets set "ConnectionStrings:GameStoreContext" "Server=localhost; Database=GameStore; User Id=sa; Password=$sa_password; TrustServerCertificate=True"
 ```
+
+## Generating Database Migrations
+```powershell
+dotnet tool install --global dotnet-ef --version 8.0.12
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.12
+
+dotnet ef migrations add InitialCreate --output-dir Data\Migrations
+```
