@@ -21,3 +21,11 @@ dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.12
 
 dotnet ef migrations add InitialCreate --output-dir Data\Migrations
 ```
+
+## Configuring entities for database migration
+```
+delete folder Data --> Migrations
+
+powershell
+dotnet ef migrations add InitialCreate --output-dir Data\Migrations
+```
