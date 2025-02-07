@@ -34,3 +34,11 @@ dotnet ef migrations add InitialCreate --output-dir Data\Migrations
 ```powershell
 dotnet ef database update
 ```
+
+## Applying migrations on startup
+```
+when Applying migrations on startup
+1. then drop databse GameStore
+2. run command "dotnet run"
+database will be create from Migrations folder
+```
